@@ -1,0 +1,202 @@
+body {
+    font-family: "Sofia";
+    background-image: url("https://scontent.fmnl25-1.fna.fbcdn.net/v/t1.15752-9/351100591_1272830693335635_3910689409106899807_n.jpg?_nc_cat=108&cb=99be929b-59f725be&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeESAY-RVcKV0-R-G834ntGE2WC_xp_R4o_ZYL_Gn9Hij5sp0sFb0ZBRjDtlsqJpmec5x25-hpjuel0F5z304DUZ&_nc_ohc=IMkW0tSlAvsAX-XI_N2&_nc_oc=AQk7kBznSGA12D6U4-SvRS6bu3EMOtrkyentS0qQbGM62jOGl8Y7v9_K399zJDebZwo&_nc_ht=scontent.fmnl25-1.fna&oh=03_AdSq5zYtCl7h9ajOTK14gLBpotIE76NVpcI-qQDAVSnTDg&oe=64EC96F1");
+    font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+    grid-template-areas:
+        "navbar "
+        "duration "
+        "amount "
+        "footer ";
+    gap: 16px;
+}
+
+.duration-container p,
+label,
+button,
+input {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.amount-container p,
+label,
+button,
+input {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* grid navigation bar */
+.navbar {
+    grid-area: navbar;
+    background-color: #A0AECD;
+    display: flex;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 7px;
+}
+
+.navbar p {
+    margin: 0;
+    font-size: 25px;
+}
+
+/* grid for duration containger */
+.duration-container {
+    grid-area: duration;
+    border-radius: 3px;
+    background-color: #A0AECD;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.duration-content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    /* This will make the content fill the available space within .duration-container */
+}
+
+.duration-container #duration-para {
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: "Sofia";
+}
+
+.duration-container #choose-para {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.duration-container button {
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid black;
+    border-right: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 7px 20px;
+    margin-right: -7px;
+    align-items: center;
+}
+
+.duration-container button:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.duration-container button:focus {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+.duration-container .year-duration {
+    border-right: none;
+    border-radius: 0 5px 0 0;
+
+}
+
+.duration-container .day-duration {
+    margin-left: 18px;
+    border-radius: 5px 0 0 0;
+
+}
+
+.duration-container #label-date-duration {
+    font-size: 15px;
+}
+
+.duration-container #input-date-duration {
+    height: 25px;
+    width: 130px;
+    padding: 0 5px;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+/* grid for amount container */
+.amount-container {
+    grid-area: amount;
+    background-color: #A0AECD;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.amount-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.amount-container .amount-para {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Sofia";
+
+}
+
+.amount-container .label-desired-budget {
+    align-self: center;
+    margin-top: 10px;
+}
+
+.amount-container .budget-amount {
+    border: none;
+    border-bottom: 2px solid black;
+    align-self: center;
+    margin-top: 10px;
+    height: 30px;
+    font-size: 20px;
+    padding: 3px 5px;
+
+}
+
+.next-container .next-button {
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+    padding: 7px;
+    width: 100%;
+    border-radius: 1px 1px 0 0;
+}
+
+.next-container .next-button:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s;
+}
+
+
+
+/* grid for footer */
+.footer {
+    grid-area: footer;
+    font-size: 23px;
+    background-color: #A0AECD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
